@@ -4,29 +4,28 @@ node {
 	     
     }
     stage('Maven version') {
-	  powershell 'mvn --version'
+	  sh 'mvn --version'
       
     }
 	stage('Java version') {
-	   powershell 'java -version'
+	   sh 'java -version'
       
     }
 	stage('Maven Validate') {
-	  powershell 'mvn validate'
+	  sh 'mvn validate'
       
     }
 	stage('Maven Compile') {
-	   powershell 'mvn compile'
+	   sh 'mvn compile'
       
     }
 	stage('Maven Test') {
-	  powershell 'mvn test'
+	  sh 'mvn test'
       
     }
 	stage('Maven Package') {
-	   powershell 'mvn package'
+	   sh 'mvn package'
       
     }
 	
 }
-
